@@ -1,0 +1,86 @@
+### GET request to example server
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/api/user
+
+###
+GET http://localhost:8080/api/user/3
+
+###
+POST http://localhost:8080/api/user/create
+Content-Type: application/json
+
+{
+  "username": "alt nume5",
+  "password": "password2",
+  "email": "email@gmail2.com",
+  "address": "adresa2",
+  "phone": "943555345345"
+}
+
+###
+PUT http://localhost:8080/api/user/1
+Content-Type: application/json
+
+{
+  "username": "nume nou",
+  "password": "parolaNoua",
+  "email": "nume@email.com",
+  "address": "strada nouă",
+  "phone": "0700000000"
+}
+
+###
+DELETE http://localhost:8080/api/user/2
+
+###
+GET http://localhost:8080/api/product
+
+###
+GET http://localhost:8080/api/product/2
+
+###
+POST http://localhost:8080/api/product/create
+Content-Type: application/json
+
+{
+  "name": "Telefon X20",
+  "description": "Smartphone de ultimă generație",
+  "price": 2500.0,
+  "quantity": 10,
+  "category": "ELECTRONIC"
+}
+
+###
+DELETE http://localhost:8080/api/product/1
+
+###
+PUT http://localhost:8080/api/product/2
+Content-Type: application/json
+
+{
+  "name": "Telefon S24 Ultra",
+  "description": "Smartphone de ultimă generație",
+  "price": 2500.0,
+  "quantity": 10,
+  "category": "ELECTRONIC"
+}
+
+###
+GET http://localhost:8080/api/order
+
+###
+GET http://localhost:8080/api/order/6
+
+###
+POST http://localhost:8080/api/order/create
+Content-Type: application/json
+
+{
+  "user": { "id": 5 },
+  "orderItems": [
+    { "product": { "id": 2 }, "quantity": 354 },
+    { "product": { "id": 4 }, "quantity": 2 }
+  ]
+}
